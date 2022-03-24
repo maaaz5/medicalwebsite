@@ -1,0 +1,25 @@
+:root {
+  --mainColorLight: #ff685b;
+  --mainColorDark: #e74040;
+  --secondaryColorDark: #252b42;
+  --DarkGray: #737373;
+  --LightGray: #b9b9b9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
