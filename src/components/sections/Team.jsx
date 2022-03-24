@@ -7,13 +7,18 @@ import pic1 from "../../Images/team member 1.svg";
 import pic2 from "../../Images/team member 2.svg";
 import pic3 from "../../Images/team member 3.svg";
 import pic4 from "../../Images/team member 4.svg";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Team = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000, delay: 150 });
+  }, []);
   return (
     <OurTeam>
       <Containers>
         <SectionsHeader title="Team" H1="Our Team" />
-        <CardsWrapper>
+        <CardsWrapper data-aos="fade-down" data-aos-delay="50">
           <TeamCard pic={pic1} name="Julian Brandt" />
           <TeamCard pic={pic2} name="Jack Bob" />
           <TeamCard pic={pic3} name="Annie Welson" />

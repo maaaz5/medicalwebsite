@@ -7,19 +7,36 @@ import {
   ParagraphStyled,
   Buton,
 } from "../../layout/globalStyle";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const MeetOurExperts = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, delay: 150 });
+  }, []);
   return (
     <Meet>
       <ExpertsText>
-        <HeadingStyled size="3rem">
+        <HeadingStyled data-aos="zoom-in-right" data-aos-delay="50" size="3rem">
           <Decoration />
           Meet Our Experts
         </HeadingStyled>
-        <ParagraphStyled size="" width="width: 80%;">
+        <ParagraphStyled
+          data-aos="fade-right"
+          data-aos-delay="250"
+          size=""
+          width="width: 80%;"
+        >
           Problems trying to resolve the conflict between the two major realms
           of Classical physics: Newtonian mechanics
         </ParagraphStyled>
-        <Buton style={{ fontWeight: 600, cursor: "pointer" }}>Learn More</Buton>
+        <Buton
+          data-aos="fade-down"
+          data-aos-delay="350"
+          style={{ fontWeight: 600, cursor: "pointer" }}
+        >
+          Learn More
+        </Buton>
       </ExpertsText>
       <MainImage width="100%" pic={pic} />
     </Meet>
@@ -32,6 +49,13 @@ const Meet = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 968px) {
+    & {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;
 const ExpertsText = styled.div`
   width: 50%;

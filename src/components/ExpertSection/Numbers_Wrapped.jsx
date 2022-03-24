@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 const Numbers_Wrapped = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, delay: 150 });
   }, []);
   return (
     <Wrapper data-aos="fade-up">

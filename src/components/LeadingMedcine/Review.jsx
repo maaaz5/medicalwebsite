@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { ParagraphStyled } from "../../layout/globalStyle";
 import pic from "../../Images/profile-image.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Review = () => {
+  useEffect(() => {
+    AOS.init({ duration: 4000, delay: 150 });
+  }, []);
   return (
-    <Feedback>
+    <Feedback data-aos="fade-down" data-aos-delay="500">
       <Stars>
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
