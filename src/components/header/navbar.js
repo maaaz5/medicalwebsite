@@ -68,8 +68,8 @@ const Burger = styled.div`
     & {
       opacity: 1;
       cursor: pointer;
-      position: fixed;
-      transform: translateX(-20px);
+      position: absolute;
+      transform: translateX(20px);
     }
   }
 `;
@@ -82,6 +82,8 @@ const Nav = styled.ul`
   list-style-type: none;
   margin-right: auto;
   width: 80%;
+  overflow-x: hidden;
+
   li {
     padding: 10px 20px;
     a {
@@ -95,6 +97,7 @@ const Nav = styled.ul`
   }
   @media screen and (max-width: 968px) {
     & {
+      overflow-x: hidden;
       position: absolute;
       right: -80px;
       top: 00;
